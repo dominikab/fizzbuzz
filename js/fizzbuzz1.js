@@ -24,3 +24,25 @@ else {fizzExecutor(input);}
 askForNumber();
 
 });
+
+
+
+function Printer(divId) {
+  var lineCount = 1;
+  
+  this.printLine = function() {
+    var m = lineCount + ': ';
+    
+    for (var i = 0; i < arguments.length; i++) {
+      m += arguments[i] + ' ';
+    }
+
+    var n = document.createElement("pre"),
+        t = document.createTextNode(m);
+
+    n.appendChild(t);
+    document.getElementById(divId).appendChild(n);
+    
+    lineCount++;
+  }
+}
