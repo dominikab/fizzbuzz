@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+var input=promt("Provide a number between 1 and 100")
+
 for (var i=1;i<100;i++){
 
     var outcome='';
