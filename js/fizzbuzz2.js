@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+var input;
 function fizzExecutor(userInput){
  for (var i=userInput;i<100;i++){
     var outcome='';
@@ -12,7 +12,7 @@ function fizzExecutor(userInput){
         }
   
 function askForNumber(){
-var input=Number(prompt("Provide a number between 1 and 100")); 
+input=Number(prompt("Provide a number between 1 and 100")); 
 if (input!==input) {alert("this is a string! Provide a number between 1 and 100");
 askForNumber();
 }
@@ -48,7 +48,7 @@ askForNumber();
     if(!myInterval){
         myInterval = 500;    
     }
-    var colors = ['brown', 'pink', 'black', 'blue', 'green', 'magenta', 'cyan', 'crimson','navy', 'orange', color];
+    var colors = ['brown', 'pink','white', 'black', 'blue', 'green', 'magenta', 'cyan', 'crimson','navy', 'orange', color];
     var currentColor = 1;
     document.getElementById(textId).style.color = colors[0];
     setInterval(function() {
