@@ -44,4 +44,22 @@ var cprint = consolePrinter.printLine;
 
 askForNumber();
 
+ function alternateColor(color, textId, myInterval) {
+    if(!myInterval){
+        myInterval = 500;    
+    }
+    var colors = ['brown', 'pink', 'black', 'blue', 'green', 'magenta', 'cyan', 'crimson','navy', 'orange', color];
+    var currentColor = 1;
+    document.getElementById(textId).style.color = colors[0];
+    setInterval(function() {
+        document.getElementById(textId).style.color = colors[currentColor];
+        if (currentColor < colors.length-1) {
+            ++currentColor;
+        } else {
+            currentColor = 0;
+        }
+    }, myInterval);
+}
+alternateColor('purple','console');
+
 });
