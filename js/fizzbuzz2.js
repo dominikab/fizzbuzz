@@ -18,7 +18,9 @@ askForNumber();
 }
 else if (input%1!=0){alert("Provide a number between 1 and 100, make sure it is an integer");
 askForNumber();}
-else {fizzExecutor(input);}
+else {
+   $('h2').append(input);
+    fizzExecutor(input);}
 }
 
 
